@@ -1,0 +1,11 @@
+my_string = input('Please enter a string ')
+  
+mydic = {} 
+  
+for keys in my_string: 
+    mydic[keys] = mydic.get(keys, 0) + 1
+
+sort_mydic = sorted(mydic.items(), key=lambda x: x[1], reverse=True)
+
+for letters in sort_mydic:
+ print(letters[0], letters[1])
